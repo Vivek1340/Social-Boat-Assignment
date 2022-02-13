@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {  useState} from "react";
+import ReactDOM from "react-dom";
+import EditProfile from "./components/EditProfile";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Body from "./components/Body";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
+  const [search , setSearch] = useState('');
+  const [user, setUser] = useState({});
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Header onChange = {setSearch} searchData = {search} name = {user.name} />
+          <Routes>
+            <Route exact path="/" element={<Body userInfo={user.uid} searchQ ={search} />} />
+            <Route
+              exact
+              path="/editProfile"
+              element={<EditProfile handle={setUser} />}
+            />
+          </Routes>
+          <Footer />
+      </Router>
     </div>
   );
 }

@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap%27');
+
+*{
+
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+body {
+    background-color: #f5f5f5;
+}
+.profile {
+    padding: 20px;
+    width: 500px;
+    min-height:200px;
+    margin-left: 25px;
+    background-color: rgba(255,255,255,0.4);
+    backdrop-filter: blur(5px);
+}
+.profile-text{
+/* background-color: #00a1ff; */
+}
+.backGround{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) ,rgba(255,255,255,0.5)),url('../../public/images/wp3521813.jpg');
+
+    width: 100%;
+    display: flex;
+    padding:30px;
+    justify-content: flex-start;
+    align-items: center;
+    height: 850px;
+    background-repeat: no-repeat;
+    background-size: auto,100% auto;
+    margin:0 ;
+    position: relative;
+}
+.profile h1{
+    padding:10px 20px;
+}
+.profile img{
+    padding :20px;
+    height: 150px;
+   aspect-ratio: 1/1;
+   background-color: white;
+   border-radius: 50%;
+   float: right;
+   margin:0 0 8px 10px;
+}
+.profile p {
+  padding:10px 20px;
+  margin-bottom: 15px;;
+}
+.profile a{
+  padding:10px 10px;
+font-size: 30px;
+color: rgba(255, 255, 255, 0.7);
+transition: transform 300ms;
+}
+.profile a:first-of-type{
+padding-left: 20px;
+}
+.profile a svg{
+  transition: transform 300ms;
+}
+.profile a svg:hover{
+  transform: scale(1.2);
+}
+
+.videoContainer h1{
+  font-family: 'Quintessential', cursive;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 20px;
+}
+.video{
+    padding: 30px;
+    width: 80%;
+    justify-content: center;
+    margin:  0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    
+
+}
+/* .video > *{
+    flex: 1 1 300px;
+} */
+.video p{
+    text-align: center;
+    margin-top: 5px;
+}
+.svgLoader {
+  margin: 0 auto;
+    width: 100px;
+    height: 100px;
+  }
+.loader{
+    margin: 0 auto;
+}
+  
+ .loader svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: rotateSVG 3s linear infinite;
+  }
+  @keyframes  rotateSVG {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+ .loader svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 7;
+    stroke: #00a1ff;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    stroke-linecap: round;
+    animation: stroke 3s linear infinite;
+  }
+  @keyframes stroke {
+    0%,
+    100% {
+      stroke-dashoffset: 400;
+    }
+    50% {
+      stroke-dashoffset: 0;
+    }
+    50.1% {
+      stroke-dashoffset: 800;
+    }
+  }
+  .error{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .icon{
+    
+    margin: 5px  5px 0 5px;
+    
+  }
+   
+  .form{
+      width: 80%;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      padding:  50px 100px;
+      margin: 50px auto;
+  }
+  .form div{
+      width: 100%;
+      margin-bottom: 15px;
+  }
+  .form div label{
+      display: block;
+      font-size: 1.2rem;
+      padding: 10px;
+      padding-left: 0;
+  }
+.form div input , .form div textarea{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    height: 30px;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    background-color: #f5f5f5;
+    resize: none;
+}
+
+.button{
+    text-decoration: none;
+    margin-top: 15px;
+    color: white;
+    height:50px;
+    width:180px;
+    border-radius: 10px;
+    background-color: blue;
+    display: inline-block;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1em;
+    border: 0px;
+    filter:drop-shadow(6px 6px 4px rgba(0,128,240,1));
+    background: linear-gradient(to right, rgba(255,113,0,1) 50% , rgba(0,128,265,1) 50%);
+   background-size: 200% 100%;
+   background-position: right bottom;
+   transition: all .5s ease-out;
+  
+  }
+  .button:hover {
+    background-position: left bottom;
+    filter:drop-shadow(6px 6px 8px rgba(255,113,0,1));
+  }
+
+
+  @media screen and (max-width:480px) {
+    .backGround{
+      padding: 20px;
+      height: 600px;
+      display: block;
+      
+    }
+    .profile{
+      padding: 25px 15px;
+      width: 100%;
+      margin-left: 0;
+      margin-top: 50px;
+      backdrop-filter: blur(2px);
+      
+    }
+    .profile img{
+      float: none;
+      display: block;
+      margin: 0 auto;
+    }
+    .profile h1, .profile p{
+      text-align: center;
+    }
+    .profile p{
+      margin-bottom: 5px;
+    }
+    .profile .social{
+      display: flex;
+      justify-content: center;
+     
+    }
+    .social a:first-of-type{
+      padding-left: 0px;
+    }
+    .social a{
+      color: rgba(0, 0, 0, 0.5);
+    }
+    .error{
+      font-size: 1.4rem;
+    }
+    .form{
+      width: 90%;
+      padding: 30px ;
+    }
+    .button{
+      margin: 15px 45px;
+    }
+  }
